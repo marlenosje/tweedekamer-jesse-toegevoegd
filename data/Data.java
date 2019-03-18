@@ -1,11 +1,11 @@
 package data;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import personen.Interviewer;
 import personen.Persoon;
 import personen.TweedeKamerlid;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 
 /* TODO optimalisatie (memory-management) */
@@ -19,6 +19,12 @@ public class Data {
     public static ArrayList<TweedeKamerlid> getKamerleden() { 
         //LAZY LOADING
         if (kamerleden.size() > 0) return kamerleden;
+
+        TweedeKamerlid jesse = new TweedeKamerlid();
+        jesse.setGeboortedatum("1 mei 1986");
+        jesse.setGender('M');
+        jesse.setNaam("Jesse");
+        jesse.setPartij("GroenLinks");
         
         TweedeKamerlid thieme = new TweedeKamerlid();
         thieme.setGeboortedatum("6 maart 1972");
